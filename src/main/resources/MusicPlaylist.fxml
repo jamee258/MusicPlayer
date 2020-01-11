@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.membrem.musicplayer.MusicPlaylistFXMLController">
+   <center>
+      <Pane fx:id="mainPane" prefHeight="421.0" prefWidth="450.0" style="-fx-background-color: #1d8dbf;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#ffea00" fontSmoothingType="LCD" layoutX="81.0" layoutY="23.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="♫ Rebmem Engineering ♫">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="193.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Playlist" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3c3c3c" height="31.0" layoutY="390.0" stroke="BLACK" strokeType="INSIDE" width="450.0" />
+            <Button fx:id="musicLibraryMenuButton" layoutX="225.0" layoutY="390.0" mnemonicParsing="false" onMouseClicked="#changeScreenToMusicLibrary" prefHeight="29.0" prefWidth="225.0" style="-fx-background-color: #009adf; -fx-font-weight: bold;" text="Music Library" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="playlistMenuButton" layoutY="390.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="223.0" style="-fx-background-color: #009adf; -fx-font-weight: bold;" text="Playlist" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+            <TableView fx:id="playlistTable" layoutY="94.0" prefHeight="288.0" prefWidth="450.0">
+              <columns>
+                <TableColumn fx:id="artistColumn" prefWidth="170.0" text="Artist" />
+                <TableColumn fx:id="trackNameColumn" prefWidth="279.0" text="Track Name" />
+              </columns>
+            </TableView>
+            <Button fx:id="addTrackButton" layoutX="179.0" layoutY="63.0" mnemonicParsing="false" onMouseClicked="#openFileBrowser" text="Add Track(s)">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children></Pane>
+   </center>
+</BorderPane>

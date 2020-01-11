@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.membrem.musicplayer.MusicPlayerFXMLController">
+   <center>
+      <Pane prefHeight="421.0" prefWidth="450.0" style="-fx-background-color: #1d8dbf;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#faa4ff" layoutX="184.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Now Playing">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="trackLogo" fitHeight="150.0" fitWidth="200.0" layoutX="159.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../Users/ISLAMM/Pictures/userIcon.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="playButton" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="318.0" mnemonicParsing="false" onAction="#play" style="-fx-background-color: white;" text="►" textAlignment="CENTER" textFill="#026f00">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font></Button>
+            <Button fx:id="forwardButton" layoutX="309.0" layoutY="318.0" mnemonicParsing="false" text="⏩" textAlignment="CENTER" textFill="#110043" />
+            <Button fx:id="rewindButton" layoutX="130.0" layoutY="318.0" mnemonicParsing="false" text="⏪" textAlignment="CENTER" textFill="#110043" />
+            <Slider fx:id="trackSlider" layoutX="91.0" layoutY="292.0" prefHeight="14.0" prefWidth="282.0" />
+            <Text fill="#ffea00" fontSmoothingType="LCD" layoutX="91.0" layoutY="29.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="♫ Rebmem Engineering ♫">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Text fx:id="artistAndTrackName" fill="WHITE" layoutX="4.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Artist Name - Track Name" textAlignment="CENTER" wrappingWidth="439.64013671875">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <MenuBar layoutX="98.0" layoutY="395.0" style="-fx-background-color: #176e96;" />
+            <Text fx:id="currentTrackPosition" fill="WHITE" layoutX="28.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00:00:00">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fx:id="trackDuration" fill="WHITE" layoutX="383.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00:02:00">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Button fx:id="pauseButton" layoutX="263.0" layoutY="318.0" mnemonicParsing="false" onAction="#pause" prefHeight="26.0" prefWidth="34.0" text="❚❚" textAlignment="CENTER">
+               <font>
+                  <Font size="10.0" />
+               </font></Button>
+            <Button fx:id="stopButton" layoutX="175.0" layoutY="318.0" mnemonicParsing="false" onAction="#stop" text="■" textAlignment="CENTER" textFill="RED" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3c3c3c" height="31.0" layoutY="392.0" stroke="BLACK" strokeType="INSIDE" width="450.0" />
+            <Button fx:id="musicLibraryMenuButton" layoutX="235.0" layoutY="392.0" mnemonicParsing="false" onMouseClicked="#changeScreenToMusicLibrary" prefHeight="29.0" prefWidth="215.0" style="-fx-background-color: #009adf; -fx-font-weight: bold;" text="Music Library" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="playlistMenuButton" layoutY="392.0" mnemonicParsing="false" onMouseClicked="#changeScreenToPlaylistScreen" prefHeight="29.0" prefWidth="234.0" style="-fx-background-color: #009adf; -fx-font-weight: bold;" text="Playlist" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="shuffleButton" layoutX="206.0" layoutY="353.0" mnemonicParsing="false" onMouseClicked="#shuffle" text="Shuffle" textFill="#310075">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Button>
+         </children></Pane>
+   </center>
+</BorderPane>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.membrem.musicplayer.MusicLibraryFXMLController">
+   <center>
+      <Pane fx:id="mainPane" prefHeight="421.0" prefWidth="450.0" style="-fx-background-color: #1d8dbf;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#ffea00" fontSmoothingType="LCD" layoutX="86.0" layoutY="27.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="♫ Rebmem Engineering ♫" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="173.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Music Library">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3c3c3c" height="31.0" layoutY="390.0" stroke="BLACK" strokeType="INSIDE" width="450.0" />
+            <Pane fx:id="trackRow" layoutX="14.0" layoutY="88.0" />
+            <Button fx:id="musicLibraryButton" layoutX="228.0" layoutY="390.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="224.0" style="-fx-background-color: #009adf; -fx-font-weight: bold;" text="Music Library" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Button>
+            <Button fx:id="musicPlayerButton" layoutY="390.0" mnemonicParsing="false" onMouseClicked="#changeScreenButtonPressed" prefHeight="29.0" prefWidth="227.0" style="-fx-background-color: #009adf; -fx-font-weight: bold;" text="Playlist" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <TableView fx:id="tracksTable" layoutX="3.0" layoutY="110.0" prefHeight="249.0" prefWidth="443.0">
+              <columns>
+                <TableColumn fx:id="artistColumn" prefWidth="124.0" text="Artist" />
+                <TableColumn fx:id="trackNameColumn" prefWidth="181.0" text="Track Name" />
+                  <TableColumn fx:id="albumNameColumn" prefWidth="137.0" text="Album" />
+              </columns>
+            </TableView>
+            <ToolBar layoutX="3.0" layoutY="68.0" prefHeight="40.0" prefWidth="443.0">
+              <items>
+                  <TextField fx:id="trackSearchText" prefHeight="25.0" prefWidth="373.0" promptText="Input a track name to search for" />
+                <Button fx:id="trackSearchButton" mnemonicParsing="false" onMouseClicked="#retrieveSpecificTracks" text="Search" />
+              </items>
+            </ToolBar>
+            <Button fx:id="playButton" defaultButton="true" layoutX="381.0" layoutY="360.0" mnemonicParsing="false" onMouseClicked="#changeSceneToMusicPlayerScreen" prefHeight="25.0" prefWidth="65.0" text="Play" textFill="#005b05">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="createPlaylistButton" layoutX="275.0" layoutY="360.0" mnemonicParsing="false" onMouseClicked="#addToPlaylist" text="Add To Playlist">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children></Pane>
+   </center>
+</BorderPane>
